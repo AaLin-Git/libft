@@ -6,11 +6,11 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:45:42 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 13:45:53 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:20:12 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	inner_loop(char *str, int *num, int *negative)
+/* void	inner_loop(char *str, int *num, int *negative)
 {
 	int	i;
 
@@ -42,4 +42,4 @@ int	ft_atoi(char *str)
 	inner_loop(str, &num, &negative);
 	num *= negative;
 	return (num);
-}
+} */

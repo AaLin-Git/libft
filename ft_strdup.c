@@ -6,25 +6,13 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:20:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 14:20:45 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:20:21 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-char	*ft_strdup(char *src)
+/* char	*ft_strdup(char *src)
 {
 	char	*str;
 	int		i;
@@ -42,4 +30,4 @@ char	*ft_strdup(char *src)
 	}
 	str[i] = '\0';
 	return (str);
-}
+} */

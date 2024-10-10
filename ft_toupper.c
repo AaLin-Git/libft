@@ -6,22 +6,24 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:02:46 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 14:03:10 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:03:59 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_toupper(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
+int	ft_toupper(int c)
+{
+	if (c > 96 && c < 123)
 	{
-		if (str[i] > 96 && str[i] < 123)
-		{
-			str[i] = str[i] - 32;
-		}
-		i++;
+		c = c - 32;
 	}
-	return (str);
+	return (c);
 }
+
+/* int	main(void)
+{
+	int result = ft_toupper(68);
+	printf("%c", result);
+	return (0);
+} */

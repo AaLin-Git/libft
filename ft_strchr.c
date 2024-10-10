@@ -6,11 +6,11 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:21:10 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 14:25:45 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:10:14 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+/* char	*strchr(const char *s, int c)
 {
 	int	i;
 
@@ -20,4 +20,4 @@ char	*strchr(const char *s, int c)
 		return (s[i]);
 	}
 	return (0);
-}
+} */

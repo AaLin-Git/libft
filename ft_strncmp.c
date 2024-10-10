@@ -6,11 +6,11 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 14:00:39 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:20:38 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+/* int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	result;
 	unsigned int	i;
@@ -36,3 +36,4 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (result);
 }
+ */

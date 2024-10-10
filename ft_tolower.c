@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ tolower.c                                      :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:38:32 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 13:45:53 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:03:20 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
+int	ft_tolower(int c)
+{
+	if (c > 64 && c < 91)
 	{
-		if (str[i] < 97 || str[i] > 122)
-		{
-			return (0);
-		}
-		i++;
+		c = c + 32;
 	}
-	return (1);
+	return (c);
 }
+
+/* int	main(void)
+{
+	int result = ft_tolower(105);
+	printf("%c", result);
+	return (0);
+} */

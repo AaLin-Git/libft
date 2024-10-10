@@ -6,11 +6,11 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:32:15 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/07 14:40:15 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:20:29 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	str_length(char *str)
+/* int	str_length(char *str)
 {
 	unsigned int	i;
 
@@ -42,4 +42,4 @@ unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	dest[i] = '\0';
 	return (src_length);
-}
+} */
