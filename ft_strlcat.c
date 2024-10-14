@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:03:59 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/10 17:29:18 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/10 18:27:07 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	const char	src[] = "world!!!";
 	size_t size;
 
-	size = 5;
+	size = 20;
 	int	my_func = ft_strlcat(dest, src, size);
 	printf("My func = %d\n", my_func);
 	return (0);

@@ -6,14 +6,16 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/10 17:20:38 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/14 16:18:40 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	result;
-	unsigned int	i;
+	size_t	result;
+	size_t	i;
 
 	result = 0;
 	i = 0;
@@ -36,4 +38,14 @@
 	}
 	return (result);
 }
- */
+
+/* int main(void)
+{
+	size_t	n = 15;
+	const char	str1[]= "The";
+	const char	str2[]= " The sign  of  a  nonzero return value";
+
+	int	result = ft_strncmp(str1, str2, n);
+	printf("Result = %d\n", result);
+	return (0);
+} */

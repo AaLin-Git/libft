@@ -6,28 +6,42 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:20:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/10 17:20:21 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/14 17:38:46 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-/* char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
-	str = malloc((ft_strlen(src) + 1) * sizeof(char));
+	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (str == NULL)
 	{
 		return (0);
 	}
-	while (src[i] != '\0')
+	while (s[i] != '\0')
 	{
-		str[i] = src[i];
+		str[i] = s[i];
 		i++;
 	}
 	str[i] = '\0';
-	return (str);
+	return ((char *)str);
+}
+
+/* int	main(void)
+{
+	char	*result;
+
+	result = ft_strdup("gjgjghj");
+	if (result == 0)
+	{
+		return (1);
+	}
+	printf("%s", result);
+	free(result);
+	return (0);
 } */
