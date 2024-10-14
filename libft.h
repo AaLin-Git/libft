@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:16:34 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/14 17:54:04 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/14 19:01:12 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
