@@ -1,35 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 14:59:19 by akovalch         ###   ########.fr       */
+/*   Created: 2024/10/16 15:03:42 by akovalch          #+#    #+#             */
+/*   Updated: 2024/10/16 15:52:18 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	int		i;
+	int		j;
+	char	*newstr;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	j = 0;
+	newstr = malloc ((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (newstr == NULL)
+		return (NULL);
+	while (s1[i])
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		newstr[i] = s1[i];
 		i++;
 	}
-	return (0);
+	while (s2[j])
+	{
+		newstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-	printf("%d", ft_strncmp("abcdef", "abc\375xx", 5));
+	char	*str1[] = "Hello ";
+	char	*str2[] = "world!";
+	printf("%s", dest);
 	return (0);
 } */

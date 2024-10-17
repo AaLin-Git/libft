@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 14:59:19 by akovalch         ###   ########.fr       */
+/*   Created: 2024/10/16 17:07:32 by akovalch          #+#    #+#             */
+/*   Updated: 2024/10/16 17:37:31 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char **ft_split(char const *s, char c)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return (0);
-}
-
-/* int main(void)
-{
-	printf("%d", ft_strncmp("abcdef", "abc\375xx", 5));
-	return (0);
+	
 } */

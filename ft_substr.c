@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 14:59:19 by akovalch         ###   ########.fr       */
+/*   Created: 2024/10/16 12:26:10 by akovalch          #+#    #+#             */
+/*   Updated: 2024/10/16 15:56:21 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*substr;
+	size_t	s_len;
 	size_t	i;
 
+	s_len = ft_strlen(s);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (s_len < (start + len))
+		len = s_len - start;
+	substr = malloc((len + 1) * sizeof(char));
+	if (substr == NULL)
+		return (NULL);
+	while (i < len)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		substr[i] = s[i + start];
 		i++;
 	}
-	return (0);
+	substr[i] = '\0';
+	return (substr);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-	printf("%d", ft_strncmp("abcdef", "abc\375xx", 5));
+	printf("%s", ft_substr("Your very first own library", 5, 5));
 	return (0);
 } */

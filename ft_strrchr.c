@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:27:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/14 17:51:11 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/16 12:16:31 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strrchr(const char *s, int c)
 
 	length = ft_strlen(s);
 	i = 0;
-	if (c == '\0')
+	if ((char)c == '\0')
 	{
 		return ((char *)&s[length]);
 	}
-	while (length > 0)
+	while (length >= 0)
 	{
-		if (s[length] == c)
+		if (s[length] == (char)c)
 		{
 			return ((char *)&s[length]);
 		}
@@ -36,8 +36,8 @@ char	*ft_strrchr(const char *s, int c)
 
 /* int	main(void)
 {
-	const char	*str = "Reproduce the behavior of the function strstr";
-	int c = 114;
+	const char	*str = "bonjour";
+	int c = 98;
 	char	*result = ft_strrchr(str, c);
 	char	*orig = strrchr(str, c);
 	printf("My func = %s\n", result);
