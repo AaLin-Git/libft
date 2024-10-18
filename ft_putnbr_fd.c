@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 17:51:41 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/17 15:24:46 by akovalch         ###   ########.fr       */
+/*   Created: 2024/10/17 17:25:15 by akovalch          #+#    #+#             */
+/*   Updated: 2024/10/18 18:02:53 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	print(char c, int fd)
 {
-	size_t			i;
-	unsigned char	*str;
+	write(fd, &c, 1);
+}
 
-	i = 0;
-	str = s;
-	while (i < n)
+void	ft_putnbr_fd(int n, int fd)
+{
+	long	num;
+	long	nb;
+
+	num = 0;
+	nb = n;
+	if (nb < 0)
 	{
-		str[i] = (unsigned char)c;
-		i++;
+		write(fd, "-", 1);
+		nb *= -1;
 	}
-	return (s);
+	if (nb >= 10)
+	{
+		ft_putnbr_fd((nb / 10), fd);
+	}
+	num = (nb % 10) + '0';
+	print(num, fd);
 }
 
 /* int	main(void)
 {
-	char	str[] = "Reproduce the behavior of the function strstr";
-	char	*result = ft_memset(str, 87, 5);
-	//char	*orig = memset(str, 87, 5);
-	printf("My func = %s\n", result);
-	//printf("Orig = %s\n", orig);
+	ft_putnbr_fd(99, 1);
 	return (0);
 } */
