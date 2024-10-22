@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:20:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 15:56:43 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:15:20 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,29 @@
 char	*ft_strdup(const char *s)
 {
 	char	*str;
-	int		i;
+	char	*flag;
 
-	i = 0;
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	while (s[i] != '\0')
+	flag = str;
+	while (*s)
 	{
-		str[i] = s[i];
-		i++;
+		*str = *s;
+		s++;
+		str++;
 	}
-	str[i] = '\0';
-	return ((char *)str);
+	*str = '\0';
+	return ((char *)flag);
 }
 
 /* int	main(void)
 {
 	char	*result;
 
-	result = ft_strdup("gjgjghj");
+	result = ft_strdup("implicitly declaring library function");
 	if (result == 0)
 	{
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:21:10 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 12:14:31 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:11:45 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == (char)c)
+		if (*s == (char)c)
 		{
-			return ((char *)&s[i]);
+			return ((char *)s);
 		}
-		i++;
+		s++;
 	}
 	if ((char)c == '\0')
 	{
-		return ((char *)&s[i]);
+		return ((char *)s);
 	}
 	return (0);
 }
@@ -35,10 +32,10 @@ char	*ft_strchr(const char *s, int c)
 /* int	main(void)
 {
 	const char	*str = "teste";
-	int c = '\0';
+	int c = 'e';
 	char	*result = ft_strchr(str, c);
-	char	*orig = strchr(str, c);
+	//char	*orig = strchr(str, c);
 	printf("My func = %s\n", result);
-	printf("Orig = %s\n", orig);
+	//printf("Orig = %s\n", orig);
 	return (0);
 } */

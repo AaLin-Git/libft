@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:05:49 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/17 15:42:38 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:09:39 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
 
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	//if (size > SIZE_MAX / nmemb)
+	//	return (NULL);
 	arr = malloc(nmemb * size);
 	if (arr == NULL)
 		return (NULL);
@@ -23,4 +27,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (arr);
 }
 
-//ft_bzero(arr, nmemb * size);
