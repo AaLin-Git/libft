@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 18:36:40 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/15 18:40:25 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:40:41 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = ft_strlen(little);
 	i = 0;
 	if (little[0] == '\0')
-	{
 		return ((char *)big);
-	}
 	if (little_len > len)
 		return (0);
 	while (i + little_len <= len && big[i] != '\0')

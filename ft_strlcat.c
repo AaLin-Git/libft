@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:03:59 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 15:40:08 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:40:13 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_length = ft_strlen(src);
 	i = 0;
 	if (size <= dest_length)
-	{
 		return (size + src_length);
-	}
 	while (src[i] != '\0' && i < size - dest_length - 1)
 	{
 		dest[dest_length + i] = src[i];

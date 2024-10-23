@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:21:10 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 17:11:45 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:39:42 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,11 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-		{
 			return ((char *)s);
-		}
 		s++;
 	}
 	if ((char)c == '\0')
-	{
 		return ((char *)s);
-	}
 	return (0);
 }
 

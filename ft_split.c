@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:07:32 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 16:47:21 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:30:34 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_countword(char const *s, char c)
 {
 	int	count;
 
-	if (!*s)
-		return (0);
 	count = 0;
 	while (*s)
 	{
@@ -31,19 +29,19 @@ int	ft_countword(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char	**parse_string(char const *s, char c)
 {
 	char	**lst;
 	int		word_len;
 	int		i;
 
 	lst = malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
-		return (0);
+	if (lst == NULL)
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
-		while (*s == c && *s)
+		while (*s == c)
 			s++;
 		if (*s)
 		{
@@ -57,6 +55,13 @@ char	**ft_split(char const *s, char c)
 	}
 	lst[i] = NULL;
 	return (lst);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	if (!s)
+		return (NULL);
+	return (parse_string(s, c));
 }
 
 /* int	main(void)

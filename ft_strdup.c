@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:20:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 17:15:20 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:39:59 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strdup(const char *s)
 
 	str = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (str == NULL)
-	{
 		return (NULL);
-	}
 	flag = str;
 	while (*s)
 	{

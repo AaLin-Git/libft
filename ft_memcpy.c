@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:03:29 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/15 17:39:14 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/23 17:39:05 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	p_src = (const unsigned char *)src;
 	i = 0;
 	if (dest == NULL && src == NULL)
-	{
-		return (0);
-	}
+		return (NULL);
 	while (i < n)
 	{
 		p_dest[i] = p_src[i];
