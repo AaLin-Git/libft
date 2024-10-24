@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:45:42 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/15 19:01:17 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:23:52 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 
 /* int	main(void)
 {
-	int	n = ft_atoi("+-123");
+	int	n = ft_atoi("+-12gfh3");
 	printf("%d", n);
 	return (0);
 } */

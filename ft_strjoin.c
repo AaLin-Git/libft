@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:03:42 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 17:22:41 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:46:24 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*newstr;
 	char	*start;
 
+	if (!s1 || !s2)
+		return (0);
 	newstr = malloc ((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (newstr == NULL)
 		return (NULL);

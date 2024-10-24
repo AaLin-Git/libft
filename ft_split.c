@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:07:32 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:30:34 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:47:42 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,36 @@ int	ft_countword(char const *s, char c)
 	return (count);
 }
 
-char	**parse_string(char const *s, char c)
+void	free_all(char **lst, int i)
 {
-	char	**lst;
-	int		word_len;
-	int		i;
+	while (i > 0)
+	{
+		i--;
+		free(lst[i]);
+	}
+	free(lst);
+}
 
-	lst = malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (lst == NULL)
+char	*extract_word(char const *s, char c)
+{
+	char	*word;
+	int		word_len;
+
+	if (!ft_strchr(s, c))
+		word_len = ft_strlen(s);
+	else
+		word_len = ft_strchr(s, c) - s;
+	word = ft_substr(s, 0, word_len);
+	if (!word)
 		return (NULL);
+	return (word);
+}
+
+char	**parse_string(char const *s, char **lst, char c)
+{
+	int		i;
+	char	*temp_string;
+
 	i = 0;
 	while (*s)
 	{
@@ -45,12 +66,14 @@ char	**parse_string(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			if (!ft_strchr(s, c))
-				word_len = ft_strlen(s);
-			else
-				word_len = ft_strchr(s, c) - s;
-			lst[i++] = ft_substr(s, 0, word_len);
-			s += word_len;
+			temp_string = extract_word(s, c);
+			if (!temp_string)
+			{
+				free_all(lst, i);
+				return (NULL);
+			}
+			lst[i++] = temp_string;
+			s += ft_strlen(temp_string);
 		}
 	}
 	lst[i] = NULL;
@@ -59,9 +82,14 @@ char	**parse_string(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
+	char	**lst;
+
 	if (!s)
 		return (NULL);
-	return (parse_string(s, c));
+	lst = malloc((ft_countword(s, c) + 1) * sizeof(char *));
+	if (lst == NULL)
+		return (NULL);
+	return (parse_string(s, lst, c));
 }
 
 /* int	main(void)

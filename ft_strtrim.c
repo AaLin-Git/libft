@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:59 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:41:06 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:01:11 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*newstr;
 
 	start = 0;
+	end = ft_strlen(s1);
+	if (end - start == 0)
+		return (ft_strdup(""));
+	if (!s1 || !set)
+		return (0);
 	while (s1[start] && set_compare(s1[start], set))
 		start++;
-	end = ft_strlen(s1);
 	while (end > start && set_compare(s1[end - 1], set))
 		end--;
 	length = end - start;

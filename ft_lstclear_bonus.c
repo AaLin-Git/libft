@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:25:00 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 15:43:30 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:22:35 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (node != NULL)
 	{
 		nextnode = nextnode->next;
-		ft_lstdelone(node, del);
+		del(node->content);
+		free(node);
 		node = nextnode;
 	}
 	*lst = NULL;
