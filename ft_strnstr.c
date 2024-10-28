@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Lyssa <Lyssa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 18:36:40 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:40:41 by akovalch         ###   ########.fr       */
+/*   Updated: 2024/10/28 09:37:13 by Lyssa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	little_len;
+	size_t	j;
 
-	little_len = ft_strlen(little);
-	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
-	if (little_len > len)
-		return (0);
-	while (i + little_len <= len && big[i] != '\0')
+	i = 0;
+	while (i <= len && big[i])
 	{
 		if (big[i] == little[0])
 		{
-			if (ft_strncmp(&big[i], little, little_len) == 0)
-				return ((char *)&big[i]);
+			j = 0;
+			while (big[i + j] == little[j] && i + j < len)
+			{
+				if (little[j + 1] == '\0')
+					return ((char *)&big[i]);
+			}
 		}
 		i++;
 	}

@@ -13,9 +13,6 @@ ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 DEST =	$(SRC:.c=.o)
 BONUS_DEST = $(BONUS_SRC:.c=.o)
 
-make:
-	$(CC) $(CFLAGS) -o $(NAME) $(SRC) $(BONUS_SRC)
-
 all: $(NAME)
 
 $(NAME) : $(DEST)
