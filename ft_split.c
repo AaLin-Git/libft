@@ -6,13 +6,13 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:07:32 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/24 15:47:42 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:38:48 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countword(char const *s, char c)
+static int	ft_countword(char const *s, char c)
 {
 	int	count;
 
@@ -29,7 +29,7 @@ int	ft_countword(char const *s, char c)
 	return (count);
 }
 
-void	free_all(char **lst, int i)
+static void	free_all(char **lst, int i)
 {
 	while (i > 0)
 	{
@@ -39,7 +39,7 @@ void	free_all(char **lst, int i)
 	free(lst);
 }
 
-char	*extract_word(char const *s, char c)
+static char	*extract_word(char const *s, char c)
 {
 	char	*word;
 	int		word_len;
@@ -54,7 +54,7 @@ char	*extract_word(char const *s, char c)
 	return (word);
 }
 
-char	**parse_string(char const *s, char **lst, char c)
+static char	**parse_string(char const *s, char **lst, char c)
 {
 	int		i;
 	char	*temp_string;
@@ -91,20 +91,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (parse_string(s, lst, c));
 }
-
-/* int	main(void)
-{
-	char	**words;
-	int		i;
-
-	words = ft_split("  Hello World     How Are  You ", ' ');
-	i = 0;
-	while (words[i])
-	{
-		printf("Word %d: %s\n", i, words[i]);
-		//free(words[i]);
-		i++;
-	}
-	free(words);
-	return (0);
-} */

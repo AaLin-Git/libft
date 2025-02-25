@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:01:48 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 15:29:08 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:37:23 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-/* int	main(void)
-{
-	char *data1 = "Hello";
-	char *data2 = " ";
-	char *data3 = "world";
-	char *data4 = "!";
-	t_list *elem1 = ft_lstnew(data1);
-	t_list *elem2 = ft_lstnew(data2);
-	elem1->next = elem2;
-	t_list *elem3 = ft_lstnew(data3);
-	elem2->next = elem3;
-	t_list *elem4 = ft_lstnew(data4);
-	elem3->next = elem4;
-	
-	int result = ft_lstsize(elem1);
-	printf("size is: %d\n", result);
-	free(elem1);
-	free(elem2);
-	free(elem3);
-	free(elem4);
-	return (0);
-} */

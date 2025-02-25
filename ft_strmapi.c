@@ -6,18 +6,11 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 18:11:39 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/18 18:27:35 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:09 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* char	f(unsigned int i, char c)
-{
-	if (i % 2 == 0)
-		return (c = 'b');
-	return (c = 'A');
-} */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -38,12 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-/* int	main(void)
-{
-	char *str = "incompatible pointer to integer conversion";
-	char *result = ft_strmapi(str, f);
-	printf("%s", result);
-	free(result);
-	return (0);
-} */

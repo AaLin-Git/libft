@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:03:42 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/24 14:46:24 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:39:50 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*newstr = '\0';
 	return (start);
 }
-
-/* int	main(void)
-{
-	char	*str1 = "Hello ";
-	char	*str2 = "world!";
-	char *result = ft_strjoin(str1, str2);
-	printf("%s", result);
-	free(result);
-	return (0);
-} */

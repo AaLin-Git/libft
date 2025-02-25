@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:02:46 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 13:17:36 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:52 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-/* int	main(void)
-{
-	int result = ft_toupper(68);
-	printf("%c", result);
-	return (0);
-} */

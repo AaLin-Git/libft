@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 12:26:10 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 17:27:47 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:42 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-/* int	main(void)
-{
-	char *result = ft_substr("Your very first own library", 5, 5);
-	printf("%s", result);
-	free(result);
-	return (0);
-} */

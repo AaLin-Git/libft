@@ -6,13 +6,13 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:54:59 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/24 15:01:11 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:37 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	set_compare(char c, const char *set)
+static int	set_compare(char c, const char *set)
 {
 	while (*set)
 	{
@@ -50,11 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstr[length] = '\0';
 	return (newstr);
 }
-
-/* int main(void)
-{
-	char *result = ft_strtrim("  DFHdfhdhbc ", " ");
-	printf("%s", result);
-	free(result);
-	return (0);
-} */

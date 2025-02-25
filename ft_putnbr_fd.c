@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:25:15 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/18 18:02:53 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/25 09:45:01 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ void	ft_putnbr_fd(int n, int fd)
 	num = (nb % 10) + '0';
 	print(num, fd);
 }
-
-/* int	main(void)
-{
-	ft_putnbr_fd(99, 1);
-	return (0);
-} */

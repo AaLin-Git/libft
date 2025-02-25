@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:35:44 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/17 15:40:56 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/25 09:45:53 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,3 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
-
-/* int	main(void)
-{
-	char	str[] = "Hello";
-
-	ft_putstr_fd(str, 1);
-	return (0);
-} */

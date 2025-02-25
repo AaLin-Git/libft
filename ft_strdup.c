@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:20:28 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:39:59 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:39:01 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,3 @@ char	*ft_strdup(const char *s)
 	*str = '\0';
 	return ((char *)flag);
 }
-
-/* int	main(void)
-{
-	char	*result;
-
-	result = ft_strdup("implicitly declaring library function");
-	if (result == 0)
-	{
-		return (1);
-	}
-	printf("%s", result);
-	free(result);
-	return (0);
-} */

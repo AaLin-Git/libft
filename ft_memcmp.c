@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:54:14 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/15 19:04:02 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:37:32 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/* int main(void)
-{
-	size_t	n = 15;
-	const char	str1[]= "The sign  of  a  nonzero return value";
-	const char	str2[]= "The s";
-
-	int	result = ft_memcmp(str1, str2, n);
-	printf("Result = %d\n", result);
-	return (0);
-} */

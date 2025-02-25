@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:38:32 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/22 17:28:31 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:47 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
-
-/* int	main(void)
-{
-	int result = ft_tolower(105);
-	printf("%c", result);
-	return (0);
-} */

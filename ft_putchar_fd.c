@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:10:51 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/17 17:23:29 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/25 09:43:52 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/* int	main(void)
-{
-	ft_putchar_fd("d", 1);
-	return (0);
-} */

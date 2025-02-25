@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 19:03:29 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:39:05 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:37:37 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/* int	main(void)
-{
-	char	src[] = "1234567890";
-	char	dest[50] = "";
-	size_t size;
-
-	size = 3;
-	ft_memcpy(dest, src, size);
-	printf("My func ft_memcpy = %s\n", dest);
-	return (0);
-} */

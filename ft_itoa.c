@@ -6,13 +6,13 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:38:29 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/17 12:05:35 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:36:13 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nbr_length(int nb)
+static int	nbr_length(int nb)
 {
 	int	length;
 
@@ -27,7 +27,7 @@ int	nbr_length(int nb)
 	return (length);
 }
 
-void	ft_putstr(int nb, int length, char *str)
+static void	convert(int nb, int length, char *str)
 {
 	long	nb1;
 
@@ -57,14 +57,6 @@ char	*ft_itoa(int n)
 	str = malloc((length + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	ft_putstr(n, length, str);
+	convert(n, length, str);
 	return (str);
 }
-
-/* int	main(void)
-{
-	char	*str = ft_itoa(0);
-	printf("%s", str);
-	free(str);
-	return (0);
-} */

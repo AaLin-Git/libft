@@ -6,12 +6,15 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:16:34 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/23 17:06:23 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/25 09:44:27 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -25,10 +28,12 @@ typedef struct s_list
 }					t_list;
 
 void	ft_bzero(void *s, size_t n);
+int		ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
+int		ft_putstr(const char *s);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
@@ -67,4 +72,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 int		ft_lstsize(t_list *lst);
+char	*get_next_line(int fd);
+int		ft_printf(const char *format, ...);
 #endif

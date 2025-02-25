@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:00:33 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/16 14:59:19 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:40:13 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/* int main(void)
-{
-	printf("%d", ft_strncmp("abcdef", "abc\375xx", 5));
-	return (0);
-} */

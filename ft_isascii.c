@@ -6,7 +6,7 @@
 /*   By: akovalch <akovalch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 12:47:52 by akovalch          #+#    #+#             */
-/*   Updated: 2024/10/10 13:15:47 by akovalch         ###   ########.fr       */
+/*   Updated: 2025/02/17 18:35:44 by akovalch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
-
-/* int	main(void)
-{
-	int result = ft_isascii(-222);
-	printf("%d", result);
-	return (0);
-} */
